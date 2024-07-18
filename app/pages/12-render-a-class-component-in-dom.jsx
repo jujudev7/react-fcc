@@ -1,4 +1,6 @@
-<h1>Render a Class Component to the DOM</h1>;
+import { Fruits } from "../components/Fruits";
+import { Vegetables } from "../components/Vegetables";
+/* <h1>Render a Class Component to the DOM</h1>; */
 
 // You may remember using the ReactDOM API in an earlier challenge to render JSX elements to the DOM. The process for rendering React components will look very similar. The past few challenges focused on components and composition, so the rendering was done for you behind the scenes. However, none of the React code you write will render to the DOM without making a call to the ReactDOM API.
 
@@ -34,12 +36,12 @@ class TypesOfFood extends React.Component {
     return (
       <div>
         <h1>Types of Food:</h1>
-        {/* Change code below this line */}
-
-        {/* Change code above this line */}
+        <Fruits />
+        <Vegetables />
       </div>
     );
   }
 }
 
 // Change code below this line
+ReactDOM.render(<TypesOfFood />, document.getElementById("challenge-node"));

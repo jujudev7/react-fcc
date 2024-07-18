@@ -1,10 +1,11 @@
-import { CreateSimpleJSXElement } from "./pages/1-create-simple-jsx-element";
-import { CreateComplexJSXElement } from "./pages/2-create-complex-jsx-element";
+import { CreateSimpleJSXElement } from "./pages/1-CreateSimpleJSXElement";
+import { CreateComplexJSXElement } from "./pages/2-CreateComplexJSXElement";
+import { AddCommentsInJSX } from "./pages/3-AddCommentsInJSX";
 
 export default function Home() {
   return (
     <div>
-      <h1>1. Create a Simple JSX Element</h1>
+      <h2>1. Create a Simple JSX Element</h2>
       <p>
         React is an Open Source view library created and maintained by Facebook.
         It's a great tool to render the User Interface (UI) of modern web
@@ -46,7 +47,7 @@ export default function Home() {
       </p>
       <CreateSimpleJSXElement />
       <div>
-        <h1>2. Create a Complex JSX Element</h1>
+        <h2>2. Create a Complex JSX Element</h2>
         <p>
           One important thing to know about nested JSX is that it must return a
           single element. This one parent element would wrap all of the other
@@ -55,12 +56,12 @@ export default function Home() {
         </p>
         <p>Here's an example:</p>
         <code>
-          Valid JSX:
+          <span className="valid">Valid JSX:</span>
           <p>&lt;p&gt;Paragraph One&lt;/p&gt;</p>
           <p>&lt;p&gt;Paragraph Two&lt;/p&gt;</p>
           <p>&lt;p&gt;Paragraph Three&lt;/p&gt;</p>
           <br />
-          Invalid JSX:
+          <span className="invalid">Invalid JSX:</span>
           <p>&lt;p&gt;Paragraph One&lt;/p&gt;</p>
           <p>&lt;p&gt;Paragraph Two&lt;/p&gt;</p>
           <p>&lt;p&gt;Paragraph Three&lt;/p&gt;</p>
@@ -84,7 +85,7 @@ export default function Home() {
           <div>
             &lt;div&gt; <p> &lt;h1&gt;Title&lt;/h1&gt;</p>
             <p>&lt;p&gt;Paragraph&lt;/p&gt;</p>
-            <ul>
+            <ul className="ul-exo2">
               &lt;ul&gt;
               <li>&lt;li&gt;A&lt;/li&gt;</li>
               <li>&lt;li&gt;B&lt;/li&gt;</li> <li>&lt;li&gt;C&lt;/li&gt;</li>{" "}
@@ -97,6 +98,20 @@ export default function Home() {
       </div>
       <br />
       <CreateComplexJSXElement />
+      <div>
+        <h2>3. Add Comments in JSX</h2>
+        <p>
+          To put comments inside JSX, you use the syntax to wrap around the
+          text, like this :
+          <pre>
+            {" "}
+            <code>&#123;/* This is a paragraph */&#125;</code>
+          </pre>
+          Add a comment somewhere within the provided div element, without
+          modifying the existing h1 or p elements.
+        </p>
+      </div>
+      <AddCommentsInJSX />
     </div>
   );
 }
